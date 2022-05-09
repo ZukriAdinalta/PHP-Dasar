@@ -1,0 +1,55 @@
+Mejalakan database di cmd.
+- buka cmd
+- cd C:\xampp\mysql\bin
+- ketik  mysql -u root -p
+- password enter
+
+Rancangan database
+- database: phpdasar
+- tabel: mahasiswa
+- id int primary key auto_increment, nama varchar(225), nim varchar(15), email varchar(100), jurusan varchar(100), gambar varchar(100)
+
+1. Melihat database
+=> show databases;
+
+2. Membuat database
+=> create database phpdasar; 
+
+3. Masuk ke database
+=> use phpdasar;
+
+4. Membuat tabel
+=> create table mahasiswa (id int primary key auto_increment, nama varchar(225), nim varchar(15), email varchar(100), jurusan varchar(100), gambar varchar(100));
+
+5. Melihat table di database
+=> show tables;
+
+6. Melihat struktur tabel
+=> describe mahasiswa;
+
+7. Masukan data ke tabel
+=> insert into mahasiswa values ('', 'Zukri Adinalta', '11353104167', 'kumabbj@gmail.com', 'Sistem Informasi', 'gambar1.jpg');
+
+8. Melihat Isi tabel
+=> select * from mahasiswa;
+
+9. Menampilkan Nim saja
+=> select nim from mahasiswa;
+
+10. Menampilkan Nama dan Nim
+=> select nama, nim from mahasiswa;
+
+11. Menampilkan Data Zukri Adinalta
+=> select * from mahasiswa where nama = 'Zukri Adinalta';
+
+12. Mengubah Data 
+=> update mahasiswa set jurusan = 'Teknik Informatika' where nama = 'Adi Putra';
+
+13. Menghapus Data
+=> delete from mahasiswa where id = 2;
+
+14. Menghapus Semua isi tabel
+=> drop table mahasiswa;
+
+15. Menghapus database
+=> drop database phpdasar;
